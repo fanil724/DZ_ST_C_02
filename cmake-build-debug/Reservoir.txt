@@ -1,0 +1,12 @@
+Kama ponds 24 5 6  
+volga reservoirs 5342 231 6746  
+Dnepr reservoirs 453 45342 655432  
+Kama ponds 24 5 6  
+volga reservoirs 5342 231 6746  
+Dnepr reservoirs 453 45342 655432  
+Kama ponds 24 5 6  
+volga reservoirs 5342 231 6746  
+Dnepr reservoirs 453 45342 655432  
+Kama ponds 24 5 6  
+volga reservoirs 5342 231 6746  
+Dnepr reservoirs 453 45342 655432  

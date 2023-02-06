@@ -8,7 +8,7 @@
 
 class ArrayReservoir {
 public:
-    ArrayReservoir() : size(0),
+    explicit ArrayReservoir() : size(0),
                        arrayreservoir_{new Reservoir[size]} {}
 
 
@@ -47,15 +47,6 @@ public:
         arrayreservoir_ = arr;
     }
 
-    size_t Search(const char *names) {
-        for (int i = 0; i < size; i++) {
-            if (strcmp(names, arrayreservoir_[i].GetName()) == 0) {
-                return i;
-            }
-        }
-        return -1;
-    };
-
     Reservoir &operator[](size_t index) {
         return arrayreservoir_[index];
     }
@@ -81,22 +72,21 @@ public:
         arrayreservoir_ = arr;
     }
 
-    void PrintPhoneBook() {
+    void Print() {
         for (int i = 0; i < size; i++) {
-            arrayreservoir_[i].PrintContact();
+            arrayreservoir_[i].PrintReservoir();
+            std::cout<<std::endl;
         }
     }
 
-
-    void WritePhonebook() {
+    void Write() {
         for (int i = 0; i < size; i++) {
             arrayreservoir_[i].WriteFile();
         }
     }
 
-
 private:
-    ArrayReservoir(const Reservoir array[], const size_t size_)
+    explicit ArrayReservoir(const Reservoir array[], const size_t size_)
             : size(size_), arrayreservoir_(new Reservoir[size]) {
         for (size_t i = 0; i < size; i++)
             arrayreservoir_[i] = array[i];
